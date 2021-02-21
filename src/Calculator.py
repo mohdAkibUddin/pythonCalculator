@@ -35,6 +35,3 @@ class Calculator:
     def squareRoot(self, x):
         self.result = squareRoot(x)
         return self.result
-
-    def clear(self):
-        self.result = 0
