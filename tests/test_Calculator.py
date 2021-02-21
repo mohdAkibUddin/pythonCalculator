@@ -27,6 +27,14 @@ class TestCases(unittest.TestCase):
             y = float(row["Value 2"])
             self.assertEqual(self.calculator.subtract(x, y), expectedResult)
 
+    def testDivision(self):
+        rows = readCSV("csvFiles/Division.csv")
+        for row in rows:
+            expectedResult = float(row["Result"])
+            x = float(row["Value 1"])
+            y = float(row["Value 2"])
+            self.assertAlmostEqual(self.calculator.divide(x, y), expectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
