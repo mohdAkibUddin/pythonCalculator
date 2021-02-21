@@ -11,6 +11,14 @@ class TestCases(unittest.TestCase):
     def testInstantiateCalculator(self):
         self.assertIsInstance(self.calculator, Calculator)
 
+    def testAddition(self):
+        rows = readCSV("csvFiles/Addition.csv")
+        for row in rows:
+            expectedResult = float(row["Result"])
+            x = float(row["Value 1"])
+            y = float(row["Value 2"])
+            self.assertEqual(self.calculator.add(x, y), expectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
