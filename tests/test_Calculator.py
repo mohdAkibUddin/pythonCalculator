@@ -50,6 +50,13 @@ class TestCases(unittest.TestCase):
             x = float(row["Value 1"])
             self.assertAlmostEqual(self.calculator.square(x), expectedResult)
 
+    def testSquareRoot(self):
+        rows = readCSV("csvFiles/SquareRoot.csv")
+        for row in rows:
+            expectedResult = float(row["Result"])
+            x = float(row["Value 1"])
+            self.assertAlmostEqual(self.calculator.squareRoot(x), expectedResult)
+
 
 if __name__ == "__main__":
     unittest.main()
