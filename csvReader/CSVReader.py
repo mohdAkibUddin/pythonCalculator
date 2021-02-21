@@ -1,13 +1,11 @@
 import csv
 
 
-class CSVReader:
+def readCSV(filepath):
     rows = []
-
-    def readCSV(self, filepath):
-        csvFile = open(filepath)
-        csvReader = csv.DictReader(csvFile, delimeter=',')
-        for row in csvReader:
-            self.rows.append(row)
-        csvFile.close()
-        return self.rows
+    csvFile = open(filepath)
+    csvReader = csv.DictReader(csvFile, delimiter=',')
+    for row in csvReader:
+        rows.append(row)
+    csvFile.close()
+    return rows
