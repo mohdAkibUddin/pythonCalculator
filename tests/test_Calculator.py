@@ -12,7 +12,7 @@ class TestCases(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def testAddition(self):
-        rows = readCSV("csvFiles/Addition.csv")
+        rows = readCSV("tests/csvFiles/Addition.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
@@ -20,7 +20,7 @@ class TestCases(unittest.TestCase):
             self.assertEqual(self.calculator.add(x, y), expectedResult)
 
     def testSubtraction(self):
-        rows = readCSV("csvFiles/Subtraction.csv")
+        rows = readCSV("tests/csvFiles/Subtraction.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
@@ -28,7 +28,7 @@ class TestCases(unittest.TestCase):
             self.assertEqual(self.calculator.subtract(x, y), expectedResult)
 
     def testDivision(self):
-        rows = readCSV("csvFiles/Division.csv")
+        rows = readCSV("tests/csvFiles/Division.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
@@ -36,7 +36,7 @@ class TestCases(unittest.TestCase):
             self.assertAlmostEqual(self.calculator.divide(x, y), expectedResult)
 
     def testMultiplication(self):
-        rows = readCSV("csvFiles/Multiplication.csv")
+        rows = readCSV("tests/csvFiles/Multiplication.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
@@ -44,14 +44,14 @@ class TestCases(unittest.TestCase):
             self.assertAlmostEqual(self.calculator.multiply(x, y), expectedResult)
 
     def testSquare(self):
-        rows = readCSV("csvFiles/Square.csv")
+        rows = readCSV("tests/csvFiles/Square.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
             self.assertAlmostEqual(self.calculator.square(x), expectedResult)
 
     def testSquareRoot(self):
-        rows = readCSV("csvFiles/SquareRoot.csv")
+        rows = readCSV("tests/csvFiles/SquareRoot.csv")
         for row in rows:
             expectedResult = float(row["Result"])
             x = float(row["Value 1"])
