@@ -57,6 +57,9 @@ class TestCases(unittest.TestCase):
             x = float(row["Value 1"])
             self.assertAlmostEqual(self.calculator.squareRoot(x), expectedResult)
 
+    def testResultProperty(self):
+        self.assertEqual(self.calculator.result, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
