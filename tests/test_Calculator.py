@@ -28,6 +28,7 @@ class TestCases(unittest.TestCase):
             self.assertEqual(self.calculator.subtract(x, y), expectedResult)
 
     def testDivision(self):
+        self.assertRaises(ZeroDivisionError, self.calculator.divide, 0, 1)
         rows = readCSV("tests/csvFiles/Division.csv")
         for row in rows:
             expectedResult = float(row["Result"])
