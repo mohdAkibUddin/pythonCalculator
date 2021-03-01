@@ -1,9 +1,4 @@
-from src.operations.Addition import addition
-from src.operations.Division import division
-from src.operations.Multiplication import multiplication
-from src.operations.Square import square
-from src.operations.SquareRoot import squareRoot
-from src.operations.Subtraction import subtraction
+from src.Operations import Operations
 
 
 class Calculator:
@@ -13,25 +8,25 @@ class Calculator:
         pass
 
     def add(self, x, y):
-        self.result = addition(x, y)
+        self.result = Operations.addition(x, y)
         return self.result
 
     def subtract(self, x, y):
-        self.result = subtraction(x, y)
+        self.result = Operations.subtraction(x, y)
         return self.result
 
     def divide(self, x, y):
-        self.result = division(x, y)
+        self.result = Operations.division(x, y)
         return self.result
 
     def multiply(self, x, y):
-        self.result = multiplication(x, y)
+        self.result = Operations.multiplication(x, y)
         return self.result
 
     def square(self, x):
-        self.result = square(x)
+        self.result = Operations.square(x)
         return self.result
 
     def squareRoot(self, x):
-        self.result = squareRoot(x)
+        self.result = Operations.squareRoot(x)
         return self.result
